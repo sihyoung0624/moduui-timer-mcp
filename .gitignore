@@ -1,0 +1,20 @@
+# ── 파이썬이 자동으로 만드는 임시 파일 (절대 올리지 않음) ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ── 가상환경 폴더 (용량 크고 올릴 필요 없음) ──
+venv/
+.venv/
+env/
+
+# ── 비밀값이 담길 수 있는 파일 (실수로도 올리면 안 됨) ──
+.env
+*.key
+*.secret
+
+# ── 운영체제/편집기 잡파일 ──
+.DS_Store
+.idea/
+.vscode/
