@@ -1,12 +1,14 @@
-# 모두의 타이머 MCP 서버가 필요로 하는 라이브러리
-# 설치:  pip install -r requirements.txt
+# Dependencies for the "moduui-timer" MCP server
+# Install:  pip install -r requirements.txt
+# NOTE: comments are kept ASCII-only on purpose -- Korean Windows (cp949)
+#       fails to parse non-ASCII requirements files with some pip versions.
 
-# MCP 공식 SDK. v2 출시가 임박(2026-07-28경)해서 <2 로 고정합니다.
+# Official MCP SDK. Pinned below v2 (v2 release expected ~2026-07-28).
 mcp>=1.27,<2
 
-# 타이머 '생성'(POST /create)에 쓰는 HTTP 클라이언트
+# HTTP client used for timer creation (POST /create)
 httpx>=0.27
 
-# 타이머 '제어'(시작/정지/리셋 등)에 쓰는 socket.io 클라이언트
-# 서버 socket.io 4.5.4 와 호환되는 5.x 대로 고정합니다.
+# socket.io client used for timer control (start/pause/reset/...)
+# Server runs socket.io 4.5.4 -> compatible with 5.x clients.
 python-socketio[client]>=5,<6
